@@ -7,9 +7,8 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $response = curl_exec($curl);
-
 curl_close($curl);
-
+// check response
 $data = json_decode($response);
 
 if(curl_errno($curl)){
